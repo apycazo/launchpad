@@ -27,6 +27,6 @@ target
 build
 
 # Ecxlude .idea, but allow the shared run configurations
-.idea
-!.idea/runConfigurationsl
+.idea/*
+!.idea/runConfigurations
 
