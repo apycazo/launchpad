@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%highlight{%d{ISO8601} [%t] %-5level > %logger{36}:%L [%X{x-op-id}] - %msg%n}"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="org.hibernate.validator.internal" level="info"/>
+    <Logger name="org.eclipse.jetty" level="info"/>
+    <Root level="info">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
