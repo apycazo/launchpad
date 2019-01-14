@@ -1,5 +1,5 @@
 rootProject.name = 'launchpad'
 include 'launchpad-spring'
-include 'launchbase-spring4'
-include 'launchbase-spring4jersey'
+include 'launchpad-spring4'
+include 'launchpad-spring4jersey'
 

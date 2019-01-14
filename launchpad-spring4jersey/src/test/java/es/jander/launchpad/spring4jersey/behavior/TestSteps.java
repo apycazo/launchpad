@@ -1,4 +1,4 @@
-package es.jander.launchbase.spring4jersey.behavior;
+package es.jander.launchpad.spring4jersey.behavior;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import es.jander.launchpad.spring4jersey.Spring4Jersey;
 import io.restassured.response.ValidatableResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.eclipse.jetty.server.Server;
 import org.springframework.util.SocketUtils;
 import org.springframework.util.StringUtils;
@@ -13,6 +14,7 @@ import org.springframework.util.StringUtils;
 import static io.restassured.RestAssured.get;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Slf4j
 public class TestSteps {
 
   ValidatableResponse response;
@@ -31,7 +33,8 @@ public class TestSteps {
 
   @Then("^the response path (.*) has value (.*)$")
   public void response_path_has_value(String path, String value) {
-    assertThat(response.extract().body().path(path).equals(value)).isTrue();
+    String pathValue = response.extract().body().path(path);
+    assertThat(pathValue).isEqualTo(value);
   }
 
   @Before

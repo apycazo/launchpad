@@ -1,4 +1,4 @@
-package es.jander.launchbase.spring4jersey.behavior;
+package es.jander.launchpad.spring4jersey.behavior;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
