@@ -36,4 +36,16 @@ public class BasicController {
       .build();
     return Response.ok(data).build();
   }
+
+  @GET
+  @Path("source")
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response getSource() {
+    Outcome data = Outcome.builder()
+      .message("GET /source response")
+      .successful(true)
+      .content(settings.getSource())
+      .build();
+    return Response.ok(data).build();
+  }
 }

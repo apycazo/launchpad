@@ -31,6 +31,7 @@ dependencies {
     "org.apache.logging.log4j:log4j-slf4j-impl:${log4j2Version}",
     // serialization
     "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}",
+    "org.yaml:snakeyaml:${snakeYamlVersion}",
     // spring framework
     "org.springframework:spring-context:${springVersion}",
     // jersey
