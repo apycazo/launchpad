@@ -1,6 +1,7 @@
 package es.jander.launchpad.spring4conditional;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.context.annotation.ConfigurationCondition;
@@ -8,8 +9,9 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.core.type.StandardAnnotationMetadata;
 import org.springframework.util.MultiValueMap;
 
-@Slf4j
 public class RequiredBeanCondition implements ConfigurationCondition {
+
+  private final Logger log = LoggerFactory.getLogger(RequiredBeanCondition.class);
 
   @Override
   public ConfigurationPhase getConfigurationPhase() {

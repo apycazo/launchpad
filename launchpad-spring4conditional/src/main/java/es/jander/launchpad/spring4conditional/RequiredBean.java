@@ -7,7 +7,7 @@ import java.lang.annotation.*;
 @Documented
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-@Conditional(RequiredPropertyCondition.class)
+@Conditional(RequiredBeanCondition.class)
 public @interface RequiredBean {
   Class<?> beanClass();
   boolean isFound() default true;
